@@ -1,0 +1,29 @@
+{
+  "name": "io.cordova.helloraylib",
+  "displayName": "HelloRaylib",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova + raylib application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "michaelfiber",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^12.0.1",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-battery-status": "^2.0.3"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-battery-status": {}
+    }
+  }
+}
