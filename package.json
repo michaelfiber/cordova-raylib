@@ -15,7 +15,8 @@
   "devDependencies": {
     "cordova-android": "^12.0.1",
     "cordova-browser": "^7.0.0",
-    "cordova-plugin-battery-status": "^2.0.3"
+    "cordova-plugin-battery-status": "^2.0.3",
+    "cordova-plugin-camera": "^7.0.0"
   },
   "cordova": {
     "platforms": [
@@ -23,7 +24,10 @@
       "android"
     ],
     "plugins": {
-      "cordova-plugin-battery-status": {}
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-camera": {
+        "ANDROIDX_CORE_VERSION": "1.6.+"
+      }
     }
   }
 }
