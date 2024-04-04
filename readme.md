@@ -6,4 +6,4 @@ The goal is to provide support for the C99 raylib program to leverage any of the
 
 | Plugin | Implementation | Status |
 | ------ | -------------- | ------ |
-| cordova-plugin-battery-status | cordova_battery_* | done |
+| [cordova-plugin-battery-status](https://github.com/apache/cordova-plugin-battery-status) | cordova_battery_* | done |
