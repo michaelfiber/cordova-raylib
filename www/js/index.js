@@ -24,8 +24,8 @@ function onDeviceReady() {
     // wasm and cordova should both be initialized now.
 
     window.addEventListener('batterystatus', (ev) => {
-        _cordova_set_battery_level(ev.level.toFixed(0));
-        _cordova_set_battery_plugged_in(ev.isPlugged);
+        _cordova_battery_set_level(ev.level.toFixed(0));
+        _cordova_battery_set_charging(ev.isPlugged);
     }, false);
 }
 

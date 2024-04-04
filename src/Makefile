@@ -11,7 +11,7 @@ CC=../emsdk/emsdk-main/upstream/emscripten/emcc
 DEST=../www
 
 # Any C functions that you want callable from JS should added to this comma separated list.
-EXPORTED_FUNCTIONS=_main,_cordova_set_battery_level,_cordova_set_battery_plugged_in
+EXPORTED_FUNCTIONS=_main,_cordova_battery_set_level,_cordova_battery_set_charging,_cordova_camera_success,_cordova_camera_failure
 
 CFLAGS=-I./external -s USE_GLFW=3 --preload-file resources
 MAKE=make
@@ -23,7 +23,7 @@ OBJ=$(patsubst %.c, %.o, $(PROJECT_SOURCE_FILES)) ./external/libraylib.a
 
 game.js: $(OBJ)
 	mkdir -p $(DEST)
-	$(CC) -o $(DEST)/$@ $^ $(CFLAGS) -sEXPORTED_FUNCTIONS=$(EXPORTED_FUNCTIONS) -sEXPORTED_RUNTIME_METHODS=ccall,cwrap --js-library web-library.js
+	$(CC) -o $(DEST)/$@ $^ $(CFLAGS) -sEXPORTED_FUNCTIONS=$(EXPORTED_FUNCTIONS) -sEXPORTED_RUNTIME_METHODS=ccall,cwrap --js-library cordova-library.js
 
 clean:
 	rm *.o

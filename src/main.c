@@ -2,8 +2,18 @@
 #include "emscripten/emscripten.h"
 #include "cordova.h"
 
+float camera_timeout = 5.0f;
+
 void update()
 {
+    camera_timeout-=GetFrameTime();
+    
+    if (camera_timeout < 0)
+    {
+        camera_timeout = 9999999.0f;
+        cordova_camera_get_picture();
+    }
+
     BeginDrawing();
     ClearBackground(BLACK);
     
@@ -11,13 +21,13 @@ void update()
     int y = 10;
     int s = GetFontDefault().baseSize;
 
-    if (cordova_battery_plugged_in)
+    if (cordova_battery_charging)
     {
-        DrawText("[battery] plugged in", x, y, s, GREEN);
+        DrawText("[battery] charging", x, y, s, GREEN);
     }
     else
     {
-        DrawText("[battery] not plugged in", x, y, s, RED);
+        DrawText("[battery] not charging", x, y, s, RED);
     }
     
     y += 10;
