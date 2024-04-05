@@ -27,6 +27,28 @@ function onDeviceReady() {
         _cordova_battery_set_level(ev.level.toFixed(0));
         _cordova_battery_set_charging(ev.isPlugged);
     }, false);
+
+
+    let Camera = window.Camera,
+    options = {
+        quality: 75,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        allowEdit: false,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 1024,
+        targetHeight: 1024,
+        correctOrientation: true
+    };
+
+    document.getElementById('camera-button').addEventListener('click', (ev) => {
+        navigator.camera.getPicture((data) => {
+            alert(data);
+        }, (error) => {
+            alert(error);
+        }, 
+        options);
+    });
 }
 
 function onWasmRuntimeInitialized() {

@@ -32,6 +32,11 @@ void cordova_battery_set_charging(int plugged_in)
 
 char cordova_camera_path[1024] = {0};
 
+bool cordova_camera_image_path_ready()
+{
+    return cordova_camera_path[0] != '\0';
+}
+
 void cordova_camera_success(char *image_path)
 {
     sprintf(cordova_camera_path, "%s", image_path);

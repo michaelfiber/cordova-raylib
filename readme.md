@@ -4,19 +4,19 @@ I am building an app that is coded in C99 using raylib. The goal is to take that
 # Plugin Support
 The goal is to provide support for the C99 raylib program to leverage any of the main, supported Cordova plugins.  
 
-| Plugin                             | Android | iOS | Web | electron | Implementation       | Status |
-| ------                             | ------- | --- | --- | -------- | -------------------- | ------ |
-| cordova-plugin-battery-status      | X       | X   | X   |          | cordova_battery_*    | done   |
-| cordova-plugin-camera              | X       | X   | X   |          |                      |        |
-| cordova-plugin-device              | X       | X   | X   | X        |                      |        |
-| cordova-plugin-dialogs             | X       | X   | X   |          |                      |        |
-| cordova-plugin-file                | X       | X   | X   |          |                      |        |
-| cordova-plugin-geolocation         | X       | X   |     |          |                      |        |
-| cordova-plugin-inappbrowser        | X       | X   | X   |          |                      |        |
-| cordova-plugin-media               | X       | X   | X   |          |                      |        |
-| cordova-plugin-media-capture       | X       | X   | X   |          |                      |        |
-| cordova-plugin-network-information | X       | X   | X   |          |                      |        |
-| cordova-plugin-screen-orientation  | X       | X   |     |          |                      |        |
-| cordova-plugin-splashscreen        |         |     | X   |          |                      |        |
-| cordova-plugin-statusbar           | X       | X   |     |          |                      |        |
-| cordova-plugin-vibration           | X       | X   |     |          |                      |        |
+| Plugin                             | Android | iOS | Web | electron | Implementation       | Status  |
+| ------                             | ------- | --- | --- | -------- | -------------------- | ------- |
+| cordova-plugin-battery-status      | X       | X   | X   |          | cordova_battery_*    | done    |
+| cordova-plugin-camera              | X       | X   | X   |          | cordova_camera_*     | partial |
+| cordova-plugin-device              | X       | X   | X   | X        |                      |         |
+| cordova-plugin-dialogs             | X       | X   | X   |          |                      |         |
+| cordova-plugin-file                | X       | X   | X   |          |                      |         |
+| cordova-plugin-geolocation         | X       | X   |     |          |                      |         |
+| cordova-plugin-inappbrowser        | X       | X   | X   |          |                      |         |
+| cordova-plugin-media               | X       | X   | X   |          |                      |         |
+| cordova-plugin-media-capture       | X       | X   | X   |          |                      |         |
+| cordova-plugin-network-information | X       | X   | X   |          |                      |         |
+| cordova-plugin-screen-orientation  | X       | X   |     |          |                      |         |
+| cordova-plugin-splashscreen        |         |     | X   |          |                      |         |
+| cordova-plugin-statusbar           | X       | X   |     |          |                      |         |
+| cordova-plugin-vibration           | X       | X   |     |          |                      |         |

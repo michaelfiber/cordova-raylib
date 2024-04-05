@@ -2,16 +2,21 @@
 #include "emscripten/emscripten.h"
 #include "cordova.h"
 
-float camera_timeout = 5.0f;
+int camera_ran = 0;
+float timeout = 1.0f;
+
+Texture2D preview_texture = {0};
 
 void update()
 {
-    camera_timeout-=GetFrameTime();
-    
-    if (camera_timeout < 0)
+    if (camera_ran == 0) 
     {
-        camera_timeout = 9999999.0f;
-        cordova_camera_get_picture();
+        timeout -= GetFrameTime();
+        if (timeout < 0) 
+        {
+            camera_ran = 1;
+            cordova_camera_get_picture();
+        }
     }
 
     BeginDrawing();
@@ -32,6 +37,9 @@ void update()
     
     y += 10;
     DrawText(TextFormat("[battery] %d%%", cordova_battery_level), x, y, s, BLUE);
+
+    y += 10;
+    DrawText(TextFormat("[camera] received file: %s", cordova_camera_path), x, y, s, BLUE);
 
     EndDrawing();
 }
