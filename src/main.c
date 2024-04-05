@@ -2,20 +2,20 @@
 #include "emscripten/emscripten.h"
 #include "cordova.h"
 
-int camera_ran = 0;
+int timer_ran = 0;
 float timeout = 1.0f;
 
 Texture2D preview_texture = {0};
 
 void update()
 {
-    if (camera_ran == 0) 
+    if (timer_ran == 0) 
     {
         timeout -= GetFrameTime();
         if (timeout < 0) 
         {
-            camera_ran = 1;
-            cordova_camera_get_picture();
+            timer_ran = 1;
+            cordova_orientation_lock_int(CORDOVA_ORIENTATION_LANDSCAPE);
         }
     }
 
@@ -41,6 +41,9 @@ void update()
     y += 10;
     DrawText(TextFormat("[camera] received file: %s", cordova_camera_path), x, y, s, BLUE);
 
+    y += 10;
+    DrawText(TextFormat("[orientation] mode: %s", cordova_orientation_mode), x, y, s, BLUE);
+    
     EndDrawing();
 }
 

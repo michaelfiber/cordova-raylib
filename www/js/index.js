@@ -28,6 +28,11 @@ function onDeviceReady() {
         _cordova_battery_set_charging(ev.isPlugged);
     }, false);
 
+    window.screen.orientation.addEventListener('change', function(){
+        let modePtr = stringToNewUTF8(window.screen.orientation.type);
+        _cordova_orientation_onchange_mode(modePtr);
+        _free(modePtr);
+    });
 
     let Camera = window.Camera,
     options = {
