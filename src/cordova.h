@@ -100,4 +100,28 @@ void cordova_orientation_onchange_mode(char *mode)
 // ORIENTATION PLUGIN
 // ==========================================================================================
 
+
+// ==========================================================================================
+// ORIENTATION PLUGIN
+
+float cordova_geolocation_latitude = 0.0f;
+float cordova_geolocation_longitude = 0.0f;
+int cordova_geolocation_accuracy = 9999;
+
+void cordova_geolocation_onchange_position(float lat, float lng, int accuracy)
+{
+    cordova_geolocation_latitude = lat;
+    cordova_geolocation_longitude = lng;
+    cordova_geolocation_accuracy = accuracy;
+}
+
+// defined in cordova-library.js
+void cordova_geolocation_watch_start();
+
+// defined in cordova-library.js
+void cordova_geolocation_watch_stop();
+
+// ORIENTATION PLUGIN
+// ==========================================================================================
+
 #endif

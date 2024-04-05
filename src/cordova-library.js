@@ -48,5 +48,20 @@ mergeInto(LibraryManager.library, {
 	},
 	cordova_orientation_current_mode: function () {
 		return stringToNewUTF8(window.screen.orientation.type);
+	},
+
+	// geolocation plugin support
+	cordova_geolocation_watch_start: function () {
+		window.cordova_geolocation_watch_id = navigator.geolocation.watchPosition((position) => {
+			_cordova_geolocation_onchange_position(position.coords.latitude, position.coords.longitude, position.coords.accuracy.toFixed(0));
+		},
+			(error) => {
+				alert('code: ' + error.code + '\n' +
+					'message: ' + error.message + '\n');
+			},
+			{ enableHighAccuracy: true })
+	},
+	cordova_geolocation_watch_stop: function () {
+		navigator.geolocation.clearWatch(window.cordova_geolocation_watch_id);
 	}
 });

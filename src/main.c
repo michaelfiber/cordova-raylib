@@ -15,7 +15,10 @@ void update()
         if (timeout < 0) 
         {
             timer_ran = 1;
-            cordova_orientation_lock_int(CORDOVA_ORIENTATION_LANDSCAPE);
+            // android emulator says lock is not supported.
+            //cordova_orientation_lock_int(CORDOVA_ORIENTATION_LANDSCAPE);
+            cordova_geolocation_watch_start();
+            cordova_camera_get_picture();
         }
     }
 
@@ -44,6 +47,9 @@ void update()
     y += 10;
     DrawText(TextFormat("[orientation] mode: %s", cordova_orientation_mode), x, y, s, BLUE);
     
+    y += 10;
+    DrawText(TextFormat("[geolocation] lat: %f, long: %f, accuracy: %d", cordova_geolocation_latitude, cordova_geolocation_longitude, cordova_geolocation_accuracy), x, y, s, BLUE);
+
     EndDrawing();
 }
 

@@ -11,7 +11,7 @@ The goal is to provide support for the C99 raylib program to leverage any of the
 | cordova-plugin-device              | X       | X   | X   | X        |                      |         |
 | cordova-plugin-dialogs             | X       | X   | X   |          |                      |         |
 | cordova-plugin-file                | X       | X   | X   |          |                      |         |
-| cordova-plugin-geolocation         | X       | X   |     |          |                      |         |
+| cordova-plugin-geolocation         | X       | X   |     |          | cordova_geolocation_*| done    |
 | cordova-plugin-inappbrowser        | X       | X   | X   |          |                      |         |
 | cordova-plugin-media               | X       | X   | X   |          |                      |         |
 | cordova-plugin-media-capture       | X       | X   | X   |          |                      |         |

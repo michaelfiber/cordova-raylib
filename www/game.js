@@ -16,7 +16,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmp5t47_dzz.js
+// include: /tmp/tmp123q9l66.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -195,21 +195,21 @@ Module['FS_createPath']("/", "resources", true, true);
 
   })();
 
-// end include: /tmp/tmp5t47_dzz.js
-// include: /tmp/tmpck_ar950.js
+// end include: /tmp/tmp123q9l66.js
+// include: /tmp/tmpkfvdwrep.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['ENVIRONMENT_IS_PTHREAD'] || Module['$ww']) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpck_ar950.js
-// include: /tmp/tmpsbn58auo.js
+  // end include: /tmp/tmpkfvdwrep.js
+// include: /tmp/tmp5aow2wgq.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach(function(task) {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpsbn58auo.js
+  // end include: /tmp/tmp5aow2wgq.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -1178,40 +1178,40 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  84912: () => { if (document.fullscreenElement) return 1; },  
- 84958: () => { return document.getElementById('canvas').width; },  
- 85010: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85078: () => { document.exitFullscreen(); },  
- 85105: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 85178: () => { if (document.fullscreenElement) return 1; },  
- 85224: () => { return document.getElementById('canvas').width; },  
- 85276: () => { return screen.width; },  
- 85301: () => { document.exitFullscreen(); },  
- 85328: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 85461: () => { if (document.fullscreenElement) return 1; },  
- 85507: () => { return document.getElementById('canvas').width; },  
- 85559: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85627: () => { if (document.fullscreenElement) return 1; },  
- 85673: () => { return document.getElementById('canvas').width; },  
- 85725: () => { return screen.width; },  
- 85750: () => { if (document.fullscreenElement) return 1; },  
- 85796: () => { return document.getElementById('canvas').width; },  
- 85848: () => { return screen.width; },  
- 85873: () => { document.exitFullscreen(); },  
- 85900: () => { if (document.fullscreenElement) return 1; },  
- 85946: () => { return document.getElementById('canvas').width; },  
- 85998: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 86066: () => { document.exitFullscreen(); },  
- 86093: () => { return screen.width; },  
- 86118: () => { return screen.height; },  
- 86144: () => { return window.screenX; },  
- 86171: () => { return window.screenY; },  
- 86198: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 86251: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 86322: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 86379: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
- 86450: () => { if (document.fullscreenElement) return 1; },  
- 86496: () => { if (document.pointerLockElement) return 1; }
+  84840: () => { if (document.fullscreenElement) return 1; },  
+ 84886: () => { return document.getElementById('canvas').width; },  
+ 84938: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85006: () => { document.exitFullscreen(); },  
+ 85033: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 85106: () => { if (document.fullscreenElement) return 1; },  
+ 85152: () => { return document.getElementById('canvas').width; },  
+ 85204: () => { return screen.width; },  
+ 85229: () => { document.exitFullscreen(); },  
+ 85256: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 85389: () => { if (document.fullscreenElement) return 1; },  
+ 85435: () => { return document.getElementById('canvas').width; },  
+ 85487: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85555: () => { if (document.fullscreenElement) return 1; },  
+ 85601: () => { return document.getElementById('canvas').width; },  
+ 85653: () => { return screen.width; },  
+ 85678: () => { if (document.fullscreenElement) return 1; },  
+ 85724: () => { return document.getElementById('canvas').width; },  
+ 85776: () => { return screen.width; },  
+ 85801: () => { document.exitFullscreen(); },  
+ 85828: () => { if (document.fullscreenElement) return 1; },  
+ 85874: () => { return document.getElementById('canvas').width; },  
+ 85926: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85994: () => { document.exitFullscreen(); },  
+ 86021: () => { return screen.width; },  
+ 86046: () => { return screen.height; },  
+ 86072: () => { return window.screenX; },  
+ 86099: () => { return window.screenY; },  
+ 86126: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 86179: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 86250: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 86307: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 86378: () => { if (document.fullscreenElement) return 1; },  
+ 86424: () => { if (document.pointerLockElement) return 1; }
 };
 function GetWindowInnerWidth() { return window.innerWidth; }
 function GetWindowInnerHeight() { return window.innerHeight; }
@@ -4360,14 +4360,47 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   var nowIsMonotonic = 1;
   var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
 
-  async function _cordova_orientation_lock(modePtr) {
-  		let mode = UTF8ToString(modePtr);
-  		try {
-  			let result = await window.screen.orientation.lock(mode);
-  		} catch (ex) {
-  			alert(ex);
+  function _cordova_camera_get_picture() {
+  		function cameraSuccess(path) {
+  			let pathPtr = stringToNewUTF8(path);
+  			_cordova_camera_success(pathPtr);
+  			_free(pathPtr);
+  		}
+  
+  		function cameraFailure(errorMessage) {
+  			_cordova_camera_failure();
+  		}
+  
+  		let Camera = window.Camera,
+  			options = {
+  				quality: 75,
+  				destinationType: Camera.DestinationType.FILE_URI,
+  				sourceType: Camera.PictureSourceType.CAMERA,
+  				allowEdit: false,
+  				encodingType: Camera.EncodingType.JPEG,
+  				targetWidth: 1024,
+  				targetHeight: 1024,
+  				correctOrientation: true
+  			};
+  		if ('camera' in navigator) {
+  			try {
+  				navigator.camera.getPicture(cameraSuccess, cameraFailure, options)
+  			} catch (ex) {
+  				alert(ex);
+  			}
   		}
   	}
+
+  var _cordova_geolocation_watch_start = function () {
+  		window.cordova_geolocation_watch_id = navigator.geolocation.watchPosition((position) => {
+  			_cordova_geolocation_onchange_position(position.coords.latitude, position.coords.longitude, position.coords.accuracy.toFixed(0));
+  		},
+  			(error) => {
+  				alert('code: ' + error.code + '\n' +
+  					'message: ' + error.message + '\n');
+  			},
+  			{ enableHighAccuracy: true })
+  	};
 
   var readEmAsmArgsArray = [];
   var readEmAsmArgs = (sigPtr, buf) => {
@@ -9565,7 +9598,9 @@ var wasmImports = {
   /** @export */
   _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
   /** @export */
-  cordova_orientation_lock: _cordova_orientation_lock,
+  cordova_camera_get_picture: _cordova_camera_get_picture,
+  /** @export */
+  cordova_geolocation_watch_start: _cordova_geolocation_watch_start,
   /** @export */
   emscripten_asm_const_int: _emscripten_asm_const_int,
   /** @export */
@@ -10102,6 +10137,7 @@ var _cordova_battery_set_charging = Module['_cordova_battery_set_charging'] = cr
 var _cordova_camera_success = Module['_cordova_camera_success'] = createExportWrapper('cordova_camera_success');
 var _cordova_camera_failure = Module['_cordova_camera_failure'] = createExportWrapper('cordova_camera_failure');
 var _cordova_orientation_onchange_mode = Module['_cordova_orientation_onchange_mode'] = createExportWrapper('cordova_orientation_onchange_mode');
+var _cordova_geolocation_onchange_position = Module['_cordova_geolocation_onchange_position'] = createExportWrapper('cordova_geolocation_onchange_position');
 var _main = Module['_main'] = createExportWrapper('main');
 var _malloc = createExportWrapper('malloc');
 var _free = createExportWrapper('free');
@@ -10115,8 +10151,8 @@ var stackRestore = createExportWrapper('stackRestore');
 var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
-var ___start_em_js = Module['___start_em_js'] = 86543;
-var ___stop_em_js = Module['___stop_em_js'] = 86616;
+var ___start_em_js = Module['___start_em_js'] = 86471;
+var ___stop_em_js = Module['___stop_em_js'] = 86544;
 
 // include: postamble.js
 // === Auto-generated postamble setup entry stuff ===
