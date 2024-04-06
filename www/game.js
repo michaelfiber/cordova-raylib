@@ -16,7 +16,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmp357an3kc.js
+// include: /tmp/tmpahrgpkdm.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -195,21 +195,21 @@ Module['FS_createPath']("/", "resources", true, true);
 
   })();
 
-// end include: /tmp/tmp357an3kc.js
-// include: /tmp/tmpyfwi4v46.js
+// end include: /tmp/tmpahrgpkdm.js
+// include: /tmp/tmp5w8d8wuo.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['ENVIRONMENT_IS_PTHREAD'] || Module['$ww']) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpyfwi4v46.js
-// include: /tmp/tmp6x2cr2ps.js
+  // end include: /tmp/tmp5w8d8wuo.js
+// include: /tmp/tmphnjrnuyk.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach(function(task) {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmp6x2cr2ps.js
+  // end include: /tmp/tmphnjrnuyk.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -1178,40 +1178,40 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  84960: () => { if (document.fullscreenElement) return 1; },  
- 85006: () => { return document.getElementById('canvas').width; },  
- 85058: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85126: () => { document.exitFullscreen(); },  
- 85153: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 85226: () => { if (document.fullscreenElement) return 1; },  
- 85272: () => { return document.getElementById('canvas').width; },  
- 85324: () => { return screen.width; },  
- 85349: () => { document.exitFullscreen(); },  
- 85376: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 85509: () => { if (document.fullscreenElement) return 1; },  
- 85555: () => { return document.getElementById('canvas').width; },  
- 85607: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85675: () => { if (document.fullscreenElement) return 1; },  
- 85721: () => { return document.getElementById('canvas').width; },  
- 85773: () => { return screen.width; },  
- 85798: () => { if (document.fullscreenElement) return 1; },  
- 85844: () => { return document.getElementById('canvas').width; },  
- 85896: () => { return screen.width; },  
- 85921: () => { document.exitFullscreen(); },  
- 85948: () => { if (document.fullscreenElement) return 1; },  
- 85994: () => { return document.getElementById('canvas').width; },  
- 86046: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 86114: () => { document.exitFullscreen(); },  
- 86141: () => { return screen.width; },  
- 86166: () => { return screen.height; },  
- 86192: () => { return window.screenX; },  
- 86219: () => { return window.screenY; },  
- 86246: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 86299: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 86370: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 86427: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
- 86498: () => { if (document.fullscreenElement) return 1; },  
- 86544: () => { if (document.pointerLockElement) return 1; }
+  84992: () => { if (document.fullscreenElement) return 1; },  
+ 85038: () => { return document.getElementById('canvas').width; },  
+ 85090: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85158: () => { document.exitFullscreen(); },  
+ 85185: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 85258: () => { if (document.fullscreenElement) return 1; },  
+ 85304: () => { return document.getElementById('canvas').width; },  
+ 85356: () => { return screen.width; },  
+ 85381: () => { document.exitFullscreen(); },  
+ 85408: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 85541: () => { if (document.fullscreenElement) return 1; },  
+ 85587: () => { return document.getElementById('canvas').width; },  
+ 85639: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85707: () => { if (document.fullscreenElement) return 1; },  
+ 85753: () => { return document.getElementById('canvas').width; },  
+ 85805: () => { return screen.width; },  
+ 85830: () => { if (document.fullscreenElement) return 1; },  
+ 85876: () => { return document.getElementById('canvas').width; },  
+ 85928: () => { return screen.width; },  
+ 85953: () => { document.exitFullscreen(); },  
+ 85980: () => { if (document.fullscreenElement) return 1; },  
+ 86026: () => { return document.getElementById('canvas').width; },  
+ 86078: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 86146: () => { document.exitFullscreen(); },  
+ 86173: () => { return screen.width; },  
+ 86198: () => { return screen.height; },  
+ 86224: () => { return window.screenX; },  
+ 86251: () => { return window.screenY; },  
+ 86278: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 86331: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 86402: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 86459: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 86530: () => { if (document.fullscreenElement) return 1; },  
+ 86576: () => { if (document.pointerLockElement) return 1; }
 };
 function GetWindowInnerWidth() { return window.innerWidth; }
 function GetWindowInnerHeight() { return window.innerHeight; }
@@ -10154,8 +10154,8 @@ var stackRestore = createExportWrapper('stackRestore');
 var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
-var ___start_em_js = Module['___start_em_js'] = 86591;
-var ___stop_em_js = Module['___stop_em_js'] = 86664;
+var ___start_em_js = Module['___start_em_js'] = 86623;
+var ___stop_em_js = Module['___stop_em_js'] = 86696;
 
 // include: postamble.js
 // === Auto-generated postamble setup entry stuff ===

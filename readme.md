@@ -9,7 +9,7 @@ The goal is to provide support for the C99 raylib program to leverage any of the
 | cordova-plugin-battery-status      | X       | X   | X   |          | cordova_battery_*     | done    |
 | cordova-plugin-camera              | X       | X   | X   |          | cordova_camera_*      | partial |
 | cordova-plugin-device              | X       | X   | X   | X        |                       |         |
-| cordova-plugin-dialogs             | X       | X   | X   |          |                       |         |
+| cordova-plugin-dialogs             | X       | X   | X   |          | cordova_dialog_*      | partial |
 | cordova-plugin-file                | X       | X   | X   |          |                       |         |
 | cordova-plugin-geolocation         | X       | X   |     |          | cordova_geolocation_* | done    |
 | cordova-plugin-inappbrowser        | X       | X   | X   |          | cordova_inappbrowser_*| partial |

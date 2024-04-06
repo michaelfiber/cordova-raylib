@@ -75,6 +75,9 @@ void update()
     y += 10;
     DrawText(TextFormat("[statusbar] is visible: %d", cordova_statusbar_is_visible()), x, y, s, BLUE);
 
+    y += 10;
+    DrawText(TextFormat("[dialogs] last button selected: %d", cordova_dialog_last_confirm), x, y, s, BLUE);
+    
     EndDrawing();
 }
 
