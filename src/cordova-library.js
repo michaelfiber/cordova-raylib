@@ -63,5 +63,33 @@ mergeInto(LibraryManager.library, {
 	},
 	cordova_geolocation_watch_stop: function () {
 		navigator.geolocation.clearWatch(window.cordova_geolocation_watch_id);
+	},
+
+	// statusbar plugin support
+	cordova_statusbar_overlays_webview: function(val) {
+		StatusBar.overlaysWebView(val);
+	},
+	cordova_statusbar_style_default: function() {
+		StatusBar.styleDefault();
+	},
+	cordova_statusbar_style_light: function() {
+		StatusBar.styleLightContent();
+	},
+	cordova_statusbar_background_by_color_name: function (colorNamePtr) {
+		let colorName = UTF8ToString(colorNamePtr);
+		StatusBar.backgroundColorByName(colorName)
+	},
+	cordova_statusbar_background_by_hex_string: function (hexStringPtr) {
+		let hexString = UTF8ToString(hexStringPtr);
+		StatusBar.backgroundColorByHexString(hexString);
+	},
+	cordova_statusbar_hide: function() {
+		StatusBar.hide();
+	},
+	cordova_statusbar_show: function() {
+		StatusBar.show();
+	},
+	cordova_statusbar_is_visible: function() {
+		return StatusBar.isVisible;
 	}
 });

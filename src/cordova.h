@@ -124,4 +124,21 @@ void cordova_geolocation_watch_stop();
 // ORIENTATION PLUGIN
 // ==========================================================================================
 
+
+// ==========================================================================================
+// STATUSBAR PLUGIN
+
+// defined in cordova-library.js
+void cordova_statusbar_overlays_webview(bool val);
+void cordova_statusbar_style_default();
+void cordova_statusbar_style_light();
+void cordova_statusbar_background_by_color_name(char *colorNamePtr);
+void cordova_statusbar_background_by_hex_string(char *hexStringPtr);
+void cordova_statusbar_hide();
+void cordova_statusbar_show();
+bool cordova_statusbar_is_visible();
+
+// STATUSBAR PLUGIN
+// ==========================================================================================
+
 #endif

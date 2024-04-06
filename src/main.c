@@ -3,7 +3,7 @@
 #include "cordova.h"
 
 int timer_ran = 0;
-float timeout = 1.0f;
+float timeout = 4.0f;
 
 Texture2D preview_texture = {0};
 
@@ -17,8 +17,9 @@ void update()
             timer_ran = 1;
             // android emulator says lock is not supported.
             //cordova_orientation_lock_int(CORDOVA_ORIENTATION_LANDSCAPE);
-            cordova_geolocation_watch_start();
-            cordova_camera_get_picture();
+            //cordova_geolocation_watch_start();
+            //cordova_camera_get_picture();
+            //cordova_statusbar_hide();
         }
     }
 
@@ -39,6 +40,9 @@ void update()
     }
     
     y += 10;
+    DrawFPS(x, y);
+
+    y += 20;
     DrawText(TextFormat("[battery] %d%%", cordova_battery_level), x, y, s, BLUE);
 
     y += 10;
@@ -50,12 +54,17 @@ void update()
     y += 10;
     DrawText(TextFormat("[geolocation] lat: %f, long: %f, accuracy: %d", cordova_geolocation_latitude, cordova_geolocation_longitude, cordova_geolocation_accuracy), x, y, s, BLUE);
 
+    y += 10;
+    DrawText(TextFormat("[statusbar] is visible: %d", cordova_statusbar_is_visible()), x, y, s, BLUE);
+
     EndDrawing();
 }
 
 int main(void)
 {
     InitWindow(800, 600, "HelloRaylib");
+
+    cordova_statusbar_hide();
 
     emscripten_set_main_loop(update, 60, 1);
 

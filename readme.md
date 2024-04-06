@@ -18,5 +18,5 @@ The goal is to provide support for the C99 raylib program to leverage any of the
 | cordova-plugin-network-information | X       | X   | X   |          |                      |         |
 | cordova-plugin-screen-orientation  | X       | X   |     |          | cordova_orientation_*| done    |
 | cordova-plugin-splashscreen        |         |     | X   |          |                      |         |
-| cordova-plugin-statusbar           | X       | X   |     |          |                      |         |
+| cordova-plugin-statusbar           | X       | X   |     |          | cordova_statusbar_*  | done    |
 | cordova-plugin-vibration           | X       | X   |     |          |                      |         |
