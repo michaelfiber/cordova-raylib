@@ -91,5 +91,77 @@ mergeInto(LibraryManager.library, {
 	},
 	cordova_statusbar_is_visible: function() {
 		return StatusBar.isVisible;
+	},
+
+	// inappbrowser plugin support
+	cordova_inappbrowser_open: function(urlPtr, target) {
+		let targetString = ["_blank", "_self", "_system"][target];
+		let url = UTF8ToString(urlPtr);
+
+		if (window.cordova_inappbrowser_ref) {
+			window.cordova_inappbrowser_ref.close();
+			delete window.cordova_inappbrowser_ref
+		}
+
+		window.cordova_inappbrowser_ref = cordova.InAppBrowser.open(url, targetString, window.cordova_inappbrowser_options ? window.cordova_inappbrowser_options.map(o => o.key + "=" + o.value).join(",") : "");
+	},
+	cordova_inappbrowser_set_option: function(keyPtr, valuePtr) {
+		let key = UTF8ToString(keyPtr);
+		let value = UTF8ToString(valuePtr);
+		if (!Array.isArray(window.cordova_inappbrowser_options)) window.cordova_inappbrowser_options = [];
+		
+		for (let i = 0; i < window.cordova_inappbrowser_options.length; i++) {
+			if (window.cordova_inappbrowser_options[i].key == key) {
+				window.cordova_inappbrowser_options[i].value = value;
+				return;
+			}
+		}
+
+		window.cordova_inappbrowser_options.push({
+			key,
+			value
+		});
+	},
+	cordova_inappbrowser_close: function() {
+		if (!window.cordova_inappbrowser_ref) return;
+
+		window.cordova_inappbrowser_ref.close();
+		delete window.cordova_inappbrowser_ref
+	},
+	cordova_inappbrowser_show: function() {
+		if (!window.cordova_inappbrowser_ref) return;
+
+		window.cordova_inappbrowser_ref.show();
+	},
+	cordova_inappbrowser_execute_script: function(injectType, injectValuePtr) {
+		if (!window.cordova_inappbrowser_ref) return;
+
+		let details = {};
+		let injectValue = UTF8ToString(injectValuePtr);
+
+		switch (injectType) {
+			case 0:
+				details.file = injectValue;
+				break;
+			case 1:
+				details.code = injectValue;
+				break;
+		}
+
+		function cb(something) {
+			let values = [];
+
+			if (Array.isArray(something)) {
+				values = something.map(s => stringToNewUTF8(s));
+			} else {
+				values = [stringToNewUTF8(something)];
+			}
+
+			_cordova_inappbrowser_execute_script_callback(values.length, values);
+
+			values.forEach(s => _free(s));
+		}
+
+		window.cordova_inappbrowser_ref.executeScript(details, cb);
 	}
 });

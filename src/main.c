@@ -3,7 +3,7 @@
 #include "cordova.h"
 
 int timer_ran = 0;
-float timeout = 4.0f;
+float timeout = 2.0f;
 
 Texture2D preview_texture = {0};
 
@@ -20,6 +20,8 @@ void update()
             //cordova_geolocation_watch_start();
             //cordova_camera_get_picture();
             //cordova_statusbar_hide();
+            cordova_inappbrowser_set_option("hidden", "no");
+            cordova_inappbrowser_open("https://google.com", CORDOVA_INAPPBROWSER_TARGET_BLANK);
         }
     }
 

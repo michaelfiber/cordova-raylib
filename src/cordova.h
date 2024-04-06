@@ -141,4 +141,26 @@ bool cordova_statusbar_is_visible();
 // STATUSBAR PLUGIN
 // ==========================================================================================
 
+
+// ==========================================================================================
+// INAPPBROWSER PLUGIN
+
+#define CORDOVA_INAPPBROWSER_TARGET_BLANK 0
+#define CORDOVA_INAPPBROWSER_TARGET_SELF 1
+#define CORDOVA_INAPPBROWSER_TARGET_SYSTEM 2
+
+// defined in cordova-library.js
+void cordova_inappbrowser_open(char *url, int target);
+
+// Visit the github repo for the plugin to see ALLLL the possible options: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/README.md#cordovainappbrowseropen
+void cordova_inappbrowser_set_option(char *name, char *value);
+
+void cordova_inappbrowser_execute_script_callback(int count, char *return_values)
+{
+    // TODO - store what is returned from executing the script.
+}
+
+// INAPPBROWSER PLUGIN
+// ==========================================================================================
+
 #endif
