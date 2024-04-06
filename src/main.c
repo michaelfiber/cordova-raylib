@@ -17,11 +17,24 @@ void update()
             timer_ran = 1;
             // android emulator says lock is not supported.
             //cordova_orientation_lock_int(CORDOVA_ORIENTATION_LANDSCAPE);
+            
             //cordova_geolocation_watch_start();
+            
             //cordova_camera_get_picture();
+            
             //cordova_statusbar_hide();
-            cordova_inappbrowser_set_option("hidden", "no");
-            cordova_inappbrowser_open("https://google.com", CORDOVA_INAPPBROWSER_TARGET_BLANK);
+            
+            //cordova_inappbrowser_set_option("hidden", "no");
+            //cordova_inappbrowser_open("https://google.com", CORDOVA_INAPPBROWSER_TARGET_BLANK);
+
+            int *pattern = malloc(3 * sizeof(int));
+            pattern[0] = 1000;
+            pattern[1] = 1000;
+            pattern[2] = 1000;
+
+            cordova_vibration_start(3, pattern);
+
+            free(pattern);
         }
     }
 

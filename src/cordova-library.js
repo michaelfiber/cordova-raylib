@@ -180,5 +180,17 @@ mergeInto(LibraryManager.library, {
 		}
 
 		window.cordova_inappbrowser_ref.insertCSS(detials, ()=>{});
+	},
+
+	// vibration plugin
+	cordova_vibration_start: function(count, durationArrayPtr) {
+		let sequence = [];
+		for (let current = durationArrayPtr; current < durationArrayPtr + count * 4; current += 4) {
+			sequence.push(HEAP32[current >> 2]);
+		}
+
+		if ('vibrate' in navigator) {
+			navigator.vibrate(sequence);
+		}
 	}
 });

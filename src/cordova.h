@@ -169,4 +169,14 @@ void cordova_inappbrowser_insert_css(int type, char *value);
 // INAPPBROWSER PLUGIN
 // ==========================================================================================
 
+
+// ==========================================================================================
+// VIBRATION PLUGIN
+
+// defined in cordova-library.js
+void cordova_vibration_start(int count, int *duration);
+
+// VIBRATION PLUGIN
+// ==========================================================================================
+
 #endif
