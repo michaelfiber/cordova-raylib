@@ -163,5 +163,22 @@ mergeInto(LibraryManager.library, {
 		}
 
 		window.cordova_inappbrowser_ref.executeScript(details, cb);
+	},
+	cordova_inappbrowser_insert_css: function(injectType, injectValuePtr) {
+		if (!window.cordova_inappbrowser_ref) return;
+
+		let details = {};
+		let injectValue = UTF8ToString(injectValuePtr);
+
+		switch (injectType) {
+			case 0:
+				details.file = injectValue;
+				break;
+			case 1:
+				details.code = injectValue;
+				break;
+		}
+
+		window.cordova_inappbrowser_ref.insertCSS(detials, ()=>{});
 	}
 });

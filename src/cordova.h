@@ -155,10 +155,16 @@ void cordova_inappbrowser_open(char *url, int target);
 // Visit the github repo for the plugin to see ALLLL the possible options: https://github.com/apache/cordova-plugin-inappbrowser/blob/master/README.md#cordovainappbrowseropen
 void cordova_inappbrowser_set_option(char *name, char *value);
 
+// defined in cordova-library.js, type=0 means the value will be URL, type=1 means the value will be script contents.
+void cordova_inappbrowser_execute_script(int type, char *value);
+
 void cordova_inappbrowser_execute_script_callback(int count, char *return_values)
 {
     // TODO - store what is returned from executing the script.
 }
+
+// defined in cordova-library.js, type=0 means the value will be URL, type=1 means the value will be CSS contents.
+void cordova_inappbrowser_insert_css(int type, char *value);
 
 // INAPPBROWSER PLUGIN
 // ==========================================================================================
