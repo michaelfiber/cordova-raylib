@@ -35,6 +35,9 @@ void update()
             cordova_vibration_start(3, pattern);
 
             free(pattern);
+
+
+            cordova_dialog_confirm("How cool is that?", "Native dialogs?", "Kind of cool", "So cool", "Not at all cool");
         }
     }
 

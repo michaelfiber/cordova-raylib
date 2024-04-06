@@ -11,7 +11,7 @@ CC=../emsdk/emsdk-main/upstream/emscripten/emcc
 DEST=../www
 
 # Any C functions that you want callable from JS should added to this comma separated list.
-EXPORTED_FUNCTIONS=_main,_cordova_battery_set_level,_cordova_battery_set_charging,_cordova_camera_success,_cordova_camera_failure,_cordova_orientation_onchange_mode,_cordova_geolocation_onchange_position,_cordova_inappbrowser_execute_script_callback
+EXPORTED_FUNCTIONS=_main,_cordova_battery_set_level,_cordova_battery_set_charging,_cordova_camera_success,_cordova_camera_failure,_cordova_orientation_onchange_mode,_cordova_geolocation_onchange_position,_cordova_inappbrowser_execute_script_callback,_cordova_dialog_confirm_callback
 
 CFLAGS=-I./external -s USE_GLFW=3 --preload-file resources
 MAKE=make

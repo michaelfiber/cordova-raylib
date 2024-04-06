@@ -16,7 +16,7 @@ var Module = typeof Module != 'undefined' ? Module : {};
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpx86euejb.js
+// include: /tmp/tmp357an3kc.js
 
   if (!Module.expectedDataFileDownloads) {
     Module.expectedDataFileDownloads = 0;
@@ -195,21 +195,21 @@ Module['FS_createPath']("/", "resources", true, true);
 
   })();
 
-// end include: /tmp/tmpx86euejb.js
-// include: /tmp/tmpf7szlm2o.js
+// end include: /tmp/tmp357an3kc.js
+// include: /tmp/tmpyfwi4v46.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if (Module['ENVIRONMENT_IS_PTHREAD'] || Module['$ww']) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpf7szlm2o.js
-// include: /tmp/tmpkqfbkkl5.js
+  // end include: /tmp/tmpyfwi4v46.js
+// include: /tmp/tmp6x2cr2ps.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach(function(task) {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpkqfbkkl5.js
+  // end include: /tmp/tmp6x2cr2ps.js
 
 
 // Sometimes an existing Module object exists with properties
@@ -1178,40 +1178,40 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  84872: () => { if (document.fullscreenElement) return 1; },  
- 84918: () => { return document.getElementById('canvas').width; },  
- 84970: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85038: () => { document.exitFullscreen(); },  
- 85065: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 85138: () => { if (document.fullscreenElement) return 1; },  
- 85184: () => { return document.getElementById('canvas').width; },  
- 85236: () => { return screen.width; },  
- 85261: () => { document.exitFullscreen(); },  
- 85288: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 85421: () => { if (document.fullscreenElement) return 1; },  
- 85467: () => { return document.getElementById('canvas').width; },  
- 85519: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 85587: () => { if (document.fullscreenElement) return 1; },  
- 85633: () => { return document.getElementById('canvas').width; },  
- 85685: () => { return screen.width; },  
- 85710: () => { if (document.fullscreenElement) return 1; },  
- 85756: () => { return document.getElementById('canvas').width; },  
- 85808: () => { return screen.width; },  
- 85833: () => { document.exitFullscreen(); },  
- 85860: () => { if (document.fullscreenElement) return 1; },  
- 85906: () => { return document.getElementById('canvas').width; },  
- 85958: () => { return parseInt(document.getElementById('canvas').style.width); },  
- 86026: () => { document.exitFullscreen(); },  
- 86053: () => { return screen.width; },  
- 86078: () => { return screen.height; },  
- 86104: () => { return window.screenX; },  
- 86131: () => { return window.screenY; },  
- 86158: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 86211: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
- 86282: () => { document.getElementById('canvas').style.cursor = 'none'; },  
- 86339: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
- 86410: () => { if (document.fullscreenElement) return 1; },  
- 86456: () => { if (document.pointerLockElement) return 1; }
+  84960: () => { if (document.fullscreenElement) return 1; },  
+ 85006: () => { return document.getElementById('canvas').width; },  
+ 85058: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85126: () => { document.exitFullscreen(); },  
+ 85153: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 85226: () => { if (document.fullscreenElement) return 1; },  
+ 85272: () => { return document.getElementById('canvas').width; },  
+ 85324: () => { return screen.width; },  
+ 85349: () => { document.exitFullscreen(); },  
+ 85376: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 85509: () => { if (document.fullscreenElement) return 1; },  
+ 85555: () => { return document.getElementById('canvas').width; },  
+ 85607: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 85675: () => { if (document.fullscreenElement) return 1; },  
+ 85721: () => { return document.getElementById('canvas').width; },  
+ 85773: () => { return screen.width; },  
+ 85798: () => { if (document.fullscreenElement) return 1; },  
+ 85844: () => { return document.getElementById('canvas').width; },  
+ 85896: () => { return screen.width; },  
+ 85921: () => { document.exitFullscreen(); },  
+ 85948: () => { if (document.fullscreenElement) return 1; },  
+ 85994: () => { return document.getElementById('canvas').width; },  
+ 86046: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 86114: () => { document.exitFullscreen(); },  
+ 86141: () => { return screen.width; },  
+ 86166: () => { return screen.height; },  
+ 86192: () => { return window.screenX; },  
+ 86219: () => { return window.screenY; },  
+ 86246: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 86299: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 86370: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 86427: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 86498: () => { if (document.fullscreenElement) return 1; },  
+ 86544: () => { if (document.pointerLockElement) return 1; }
 };
 function GetWindowInnerWidth() { return window.innerWidth; }
 function GetWindowInnerHeight() { return window.innerHeight; }
@@ -4360,6 +4360,26 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   var nowIsMonotonic = 1;
   var __emscripten_get_now_is_monotonic = () => nowIsMonotonic;
 
+  function _cordova_dialog_confirm(messagePtr, titlePtr, button1Ptr, button2Ptr, button3Ptr) {
+  		let message = UTF8ToString(messagePtr);
+  		let title = UTF8ToString(titlePtr);
+  		
+  		let buttons = [];
+  
+  		if (button1Ptr != null) {
+  			buttons.push(UTF8ToString(button1Ptr))
+  		}
+  
+  		if (button2Ptr != null) {
+  			buttons.push(UTF8ToString(button2Ptr))
+  		}
+  
+  		if (button3Ptr != null) {
+  			buttons.push(UTF8ToString(button3Ptr))
+  		}
+  		navigator.notification.confirm(message, _cordova_dialog_confirm_callback, title, buttons);
+  	}
+
   function _cordova_statusbar_hide() {
   		StatusBar.hide();
   	}
@@ -4369,7 +4389,6 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   	}
 
   function _cordova_vibration_start(count, durationArrayPtr) {
-  		alert('vibrate');
   		let sequence = [];
   		for (let current = durationArrayPtr; current < durationArrayPtr + count * 4; current += 4) {
   			sequence.push(HEAP32[current >> 2]);
@@ -4377,8 +4396,6 @@ function GetWindowInnerHeight() { return window.innerHeight; }
   
   		if ('vibrate' in navigator) {
   			navigator.vibrate(sequence);
-  		} else {
-  			alert('vibrate not found');
   		}
   	}
 
@@ -9578,6 +9595,8 @@ var wasmImports = {
   /** @export */
   _emscripten_get_now_is_monotonic: __emscripten_get_now_is_monotonic,
   /** @export */
+  cordova_dialog_confirm: _cordova_dialog_confirm,
+  /** @export */
   cordova_statusbar_hide: _cordova_statusbar_hide,
   /** @export */
   cordova_statusbar_is_visible: _cordova_statusbar_is_visible,
@@ -10121,9 +10140,10 @@ var _cordova_camera_failure = Module['_cordova_camera_failure'] = createExportWr
 var _cordova_orientation_onchange_mode = Module['_cordova_orientation_onchange_mode'] = createExportWrapper('cordova_orientation_onchange_mode');
 var _cordova_geolocation_onchange_position = Module['_cordova_geolocation_onchange_position'] = createExportWrapper('cordova_geolocation_onchange_position');
 var _cordova_inappbrowser_execute_script_callback = Module['_cordova_inappbrowser_execute_script_callback'] = createExportWrapper('cordova_inappbrowser_execute_script_callback');
+var _cordova_dialog_confirm_callback = Module['_cordova_dialog_confirm_callback'] = createExportWrapper('cordova_dialog_confirm_callback');
 var _malloc = createExportWrapper('malloc');
-var _main = Module['_main'] = createExportWrapper('main');
 var _free = createExportWrapper('free');
+var _main = Module['_main'] = createExportWrapper('main');
 var _fflush = createExportWrapper('fflush');
 var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
 var _emscripten_stack_get_free = () => (_emscripten_stack_get_free = wasmExports['emscripten_stack_get_free'])();
@@ -10134,8 +10154,8 @@ var stackRestore = createExportWrapper('stackRestore');
 var stackAlloc = createExportWrapper('stackAlloc');
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
 var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji');
-var ___start_em_js = Module['___start_em_js'] = 86503;
-var ___stop_em_js = Module['___stop_em_js'] = 86576;
+var ___start_em_js = Module['___start_em_js'] = 86591;
+var ___stop_em_js = Module['___stop_em_js'] = 86664;
 
 // include: postamble.js
 // === Auto-generated postamble setup entry stuff ===

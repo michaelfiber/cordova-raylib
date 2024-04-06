@@ -179,4 +179,21 @@ void cordova_vibration_start(int count, int *duration);
 // VIBRATION PLUGIN
 // ==========================================================================================
 
+
+// ==========================================================================================
+// DIALOG PLUGIN
+
+int cordova_dialog_last_confirm = -1;
+
+void cordova_dialog_confirm_callback(int value)
+{
+    cordova_dialog_last_confirm = value;
+}
+
+// defined in cordova-library.js.
+void cordova_dialog_confirm(char *message, char *title, char *button1, char *button2, char *button3);
+
+// DIALOG PLUGIN
+// ==========================================================================================
+
 #endif

@@ -192,5 +192,26 @@ mergeInto(LibraryManager.library, {
 		if ('vibrate' in navigator) {
 			navigator.vibrate(sequence);
 		}
+	},
+
+	// dialog plugin
+	cordova_dialog_confirm: function (messagePtr, titlePtr, button1Ptr, button2Ptr, button3Ptr) {
+		let message = UTF8ToString(messagePtr);
+		let title = UTF8ToString(titlePtr);
+		
+		let buttons = [];
+
+		if (button1Ptr != null) {
+			buttons.push(UTF8ToString(button1Ptr))
+		}
+
+		if (button2Ptr != null) {
+			buttons.push(UTF8ToString(button2Ptr))
+		}
+
+		if (button3Ptr != null) {
+			buttons.push(UTF8ToString(button3Ptr))
+		}
+		navigator.notification.confirm(message, _cordova_dialog_confirm_callback, title, buttons);
 	}
 });
